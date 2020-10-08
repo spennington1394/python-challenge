@@ -13,6 +13,8 @@ with open(budget_csv) as csv_file:
     month = []
     total_revenue = []
 
+    ac = 0
+
     #in for loop append the two lists created above
     for row in csv_reader:
         month.append(row[0])
@@ -24,4 +26,12 @@ with open(budget_csv) as csv_file:
     #take string list and change to integers using a comprehensive list 
     revenue = [int (i) for i in total_revenue]
     print(sum(revenue))
+
+    def average_change(startpt , currentpt):
+        return((float(currentpt)-startpt)/abs(total_month))
+
+    for i in revenue:
+        ac = average_change(revenue[0], i)
+    print(ac)
+
 
