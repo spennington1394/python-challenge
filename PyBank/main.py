@@ -14,6 +14,7 @@ with open(budget_csv) as csv_file:
     total_revenue = []
 
     ac = 0
+    greatest_increase = 0
 
     #in for loop append the two lists created above
     for row in csv_reader:
@@ -33,5 +34,8 @@ with open(budget_csv) as csv_file:
     for i in revenue:
         ac = average_change(revenue[0], i)
     print(ac)
+
+    
+
 
 
