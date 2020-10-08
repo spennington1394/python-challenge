@@ -10,9 +10,20 @@ with open(budget_csv) as csv_file:
     csv_header = next(csv_file)
     print(csv_header)
 
-#state variables that need to be set to 0. 
+#state variables and variables that need to be set to 0. 
+months = []
+profit_loss_change = []
+
+total_profit_loses = 0
+total_months= 0
+
+#establish for loop
+
+
+
 
 #calculate greatest increase
+total_months = len(months)
 
 #calculate greatest lose
 
@@ -27,5 +38,3 @@ print(f'Total Revenue $', {total_profit_loses})
 print(f'Average Revenue $', {average})
 print(f'Greatest Increase in Profits'{},{})
 print(f'Greatest Decrease in Profits' {},{})
-    
-        
