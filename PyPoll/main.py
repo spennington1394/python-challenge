@@ -24,3 +24,12 @@ with open(election_csv) as csv_file:
 
     total_khan = candidate.count("Khan")
     print(total_khan)
+
+    total_correy = candidate.count("Correy")
+    print(total_correy)
+
+    total_li = candidate.count("Li")
+    print(total_li)
+
+    total_otooley = candidate.count("O'Tooley")
+    print(total_otooley)
