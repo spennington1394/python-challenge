@@ -13,10 +13,15 @@ with open(budget_csv) as csv_file:
     month = []
     total_revenue = []
 
-
+    #in for loop append the two lists created above
     for row in csv_reader:
         month.append(row[0])
         total_revenue.append(row[1])
-
+    #find the length of month to give us the total_month
     total_month = (len(month))
     print(total_month)
+
+    #take string list and change to integers using a comprehensive list 
+    revenue = [int (i) for i in total_revenue]
+    print(sum(revenue))
+
