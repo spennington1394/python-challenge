@@ -9,3 +9,13 @@ with open(election_csv) as csv_file:
 
     csv_header = next(csv_file)
     print(csv_header)
+
+    voter = []
+    candidate = []
+
+    for row in csv_reader:
+        voter.append(row[0])
+        candidate.append(row[2])
+
+    total_voter = (len(voter))
+    print(total_voter)
