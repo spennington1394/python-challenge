@@ -33,3 +33,17 @@ with open(election_csv) as csv_file:
 
     total_otooley = candidate.count("O'Tooley")
     print(total_otooley)
+
+    percent_khan = (total_khan/total_voter)*100
+    print(percent_khan)
+
+    percent_correy = (total_correy/total_voter)*100
+    print(percent_correy)
+
+    percent_li = (total_li/total_voter)*100
+    print(percent_li)
+    
+
+    percent_otooley = (total_otooley/total_voter)*100
+    print(percent_otooley)
+
