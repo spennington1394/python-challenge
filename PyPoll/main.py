@@ -14,6 +14,7 @@ with open(election_csv) as csv_file:
 
     voter = []
     candidate = []
+    total_voter = int
 
     for row in csv_reader:
         voter.append(row[0])
@@ -46,4 +47,14 @@ with open(election_csv) as csv_file:
 
     percent_otooley = (total_otooley/total_voter)*100
     print(percent_otooley)
+
+    print("----------------------------")
+    print("Election Results")
+    print("----------------------------")
+    print(f'Total Votes: ', total_voter )
+    print("----------------------------")
+    print(f'Khan: ' + percent_khan  + total_khan)
+
+
+
 
