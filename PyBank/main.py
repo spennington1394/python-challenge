@@ -17,7 +17,8 @@ with open(budget_csv) as csv_file:
 
     ac = 0
     greatest_increase = 0
-    great_decrease = 0 
+    great_decrease = 0
+     
     
     
 
@@ -34,20 +35,15 @@ with open(budget_csv) as csv_file:
     print(sum(revenue))
 
     #function to help calculate average change
-
-    def average_change(startpt, currentpt):
-       
-        startpt = revenue[0]
-        for i in revenue:
-            print(i)
-            net_change.append((float(revenue[i] - startpt)))
-            startpt = revenue[i - 1]
-            net_change/(revenue[i] - startpt)
-
-    p_l_change = average_change(row[1], 0)
+    startpt = revenue[0]
+    
+    for i in revenue:
+        net_change.append((float(revenue[i] - startpt)))
+        startpt = revenue[i - 1]
         
 
-    
+    print(net_change)
+    p_l_change = average_change(row[1], 0)
     
 
     
