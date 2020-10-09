@@ -35,25 +35,32 @@ with open(election_csv) as csv_file:
     total_otooley = candidate.count("O'Tooley")
     print(total_otooley)
 
-    percent_khan = (total_khan/total_voter)*100
+    percent_khan = round((total_khan/total_voter)*100)
     print(percent_khan)
 
-    percent_correy = (total_correy/total_voter)*100
+    percent_correy = round((total_correy/total_voter)*100)
     print(percent_correy)
 
-    percent_li = (total_li/total_voter)*100
-    print(percent_li)
+    percent_li = round((total_li/total_voter)*100)
+    print((percent_li))
     
 
-    percent_otooley = (total_otooley/total_voter)*100
+    percent_otooley = round((total_otooley/total_voter)*100)
     print(percent_otooley)
 
     print("----------------------------")
     print("Election Results")
     print("----------------------------")
-    print(f'Total Votes: ', total_voter )
+    print(f"Total Votes: {total_voter}")
     print("----------------------------")
-    print(f'Khan: ' + percent_khan  + total_khan)
+    print(f"Khan: {percent_khan} % {total_khan}")
+    print(f"Correy: {percent_correy} %  {total_correy}")
+    print(f"Li: {percent_li} % {total_correy}")
+    print(f"O'Tooley: {percent_otooley} % {total_otooley}")
+    print("----------------------------")
+    print("Winner: Khan")
+    print("----------------------------")
+    
 
 
 

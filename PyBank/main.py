@@ -35,10 +35,15 @@ with open(budget_csv) as csv_file:
     def average_change(startpt , currentpt):
         startpt = revenue[0]
         for i in revenue:
+            print(i)
             net_change.append((float(revenue[i] -startpt)))
             startpt = revenue[i - 1]
 
-    average_change = (int(net_change)/int(total_month))
+    average = average_change
+
+    
+
+   
 
     
 
