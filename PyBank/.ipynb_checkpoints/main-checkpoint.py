@@ -2,7 +2,6 @@ import os
 import csv
 
 budget_csv = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyBank/Resources/budget_data.csv")
-financial_output = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyBank/Resources/financial_output.txt")
 
 #open and read csv
 with open(budget_csv) as csv_file:
@@ -15,6 +14,8 @@ with open(budget_csv) as csv_file:
     total_revenue = []
     net_change = []
 
+
+    ac = 0
     greatest_increase = 0
     great_decrease = 0
      
@@ -38,9 +39,15 @@ with open(budget_csv) as csv_file:
     startpt = revenue[0]
 
     for i in revenue:
-        net_change.append((float(revenue[revenue.index(i)] - startpt)))     
+        net_change.append((float(revenue[revenue.index(i)] - startpt)))
+#       
+  
+       
         startpt = i
+        
+    #print to make sure above for loop works once i work out the list index out of range error
     
+
     #calculating average change over the complete csv file
     p_l_change = (sum(net_change)/85)
     print(p_l_change)
@@ -50,22 +57,10 @@ with open(budget_csv) as csv_file:
     greatest_decrease = min(net_change)
     greatest_increase_month = month[net_change.index(greatest_increase)]
     print(greatest_increase_month)
-    greatest_decrease_month = month[net_change.index(greatest_decrease)]
-    print(greatest_decrease_month)
+    # greatest_decrease_month = total_month(row[0], greatest_decrease)
 
-output = (
-"----------------------------\n"
-"Financial Analysis\n"
-"----------------------------\n"
-f"Total Month: {total_month}\n"
-f"Average Change: {p_l_change}\n"
-f"Greatest Increase in Profits: {greatest_increase_month} {greatest_increase}\n"
-f"Greatest Decrease in Profits: {greatest_decrease_month} {greatest_decrease}\n"
 
-)    
 
-with open(financial_output, "w") as txt_file:
-    txt_file.write(output)
 
     
 
