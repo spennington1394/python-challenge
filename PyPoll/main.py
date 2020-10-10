@@ -4,7 +4,7 @@ import csv
 
 
 election_csv = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyPoll/Resources/election_data.csv" )
-poll_output = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyPoll/Resources/poll_to_out.txt")
+poll_output = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyPoll/Analysis/poll_to_out.txt")
 
 
 with open(election_csv) as csv_file:

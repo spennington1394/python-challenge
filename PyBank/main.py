@@ -2,7 +2,7 @@ import os
 import csv
 
 budget_csv = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyBank/Resources/budget_data.csv")
-financial_output = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyBank/Resources/financial_output.txt")
+financial_output = os.path.join("/Users/kscomputer/Desktop/DataRepository/Python-Challenge/PyBank/Analysis/financial_output.txt")
 
 
 with open(budget_csv) as csv_file:
